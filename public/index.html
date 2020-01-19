@@ -2,23 +2,35 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with govirtuo.com</title>
+    <link rel='stylesheet' href='dress-up.css'/>
   </head>
   <body>
-    <div id="car">
-      <input class="js-name" type="text" placeholder="Car name"/>
-      <input class="js-price-by-day" type="number" placeholder="Price by day"/>
-      <input class="js-price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="js-name" type="text" placeholder="Driver name"/>
-      <input class="js-begin" type="date" placeholder="Rental begin date"/>
-      <input class="js-end" type="date" placeholder="Rental end date"/>
-      <input class="js-distance" type="number" placeholder="Distance in km"/>
-      <input class="js-option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="virtuo.js"></script>
-    <script src="index.js"></script>
+    <div class = "title">
+    <h1>SIMULATE A RENT<span>Fill the form to see where your money is going</span></h1>
+    <form>
+      <fieldset><legend>Car Info</legend>
+      <div class="info" id="car">
+        <label>Enter the rental car's name<input class="js-name js" type="text"/></label>
+        <label>Enter the price of the car by day<input class="js-price-by-day js" type="number"/></label>
+        <label>Enter the price of the car by kilometer<input class="js-price-by-km js" type="number" /></label>    
+      </div>
+      </fieldset>
+      <fieldset><legend>Rental Info</legend>
+      <div class="info" id="rental">  
+        <label>Enter the driver's name<input class="js-name js" type="text" /></label>
+        <label>Enter the rental begin date<input class="js-begin js" type="date" placeholder="Rental begin date"/></label>
+        <label>Enter the rental end date<input class="js-end js" type="date" placeholder="Rental end date"/></label>
+        <label>Enter the distance traveled in km<input class="js-distance js" type="number" /></label>      
+      </div>
+      </fieldset>
+      <button id="compute" class="btn btn-info js">Compute</button>
+      <span class = "option">
+      <input class="js-option " type="checkbox" placeholder="Deductible option"/>Subscribe to an insurance
+      </span>
+      <div id="actors"></div>
+      <script src="virtuo.js"></script>
+      <script src="index.js"></script>
+    </form>
+  </div>
   </body>
 </html>
